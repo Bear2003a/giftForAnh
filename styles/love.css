@@ -1,0 +1,29 @@
+#gotoview{
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    transform:translateX(-50%);
+    top: 85%;
+    transition: all 0.2s;
+}
+
+.left{
+    top: 30% !important;
+    left: 10% !important;
+}
+.right{
+    left: 80% !important;
+    top: 30% !important;
+}
+.center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.top{
+    top: 45% !important;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
