@@ -45,13 +45,13 @@
 
 
 <BODY>
-    <audio id="myAudio" autoplay>
+    <audio id="myAudio">
         <source src="music/nhac.mp3" type="audio/mp3" />
     </audio>
 
     <canvas id="pinkboard"></canvas>
 
-    <button class="btn btn-primary" id="gotoview">Bấm vào đây đi bé</button>
+    <button class="btn btn-primary" id="gotoview">Bấm vào đây đi bé (Bấm chậm thôi mà nghe nhạc)</button>
 
 
     <script>
@@ -76,9 +76,15 @@
                 button.classList.add("top")
                 button.innerHTML = "<a class='link' href='./view/index.html'>Bấm nốt cái đi, iu bé :33</a>"
             }
+
+            else if(button.classList.contains("top")){
+                button.classList.remove("top")
+                button.innerText ="Chờ xem nè"
+            }
             
 
             else {
+                document.querySelector("#myAudio").play()
                 button.classList.add("left")
                 button.innerText = "Chết, bấm đây chứ"
                 button.classList.remove("btn-primary")
